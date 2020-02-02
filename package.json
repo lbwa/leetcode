@@ -5,7 +5,7 @@
   "description": "The solutions for leetcode",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"no test\" && exit 1"
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -27,7 +27,41 @@
     "singleQuote": true,
     "trailingComma": "none"
   },
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^25.1.1",
+    "jest": "^25.1.0",
+    "ts-jest": "^25.1.0",
     "typescript": "^3.7.5"
+  },
+  "jest": {
+    "coverageDirectory": "coverage",
+    "coveragePathIgnorePatterns": [
+      "\\\\node_modules\\\\"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "jsx",
+      "ts",
+      "tsx",
+      "node"
+    ],
+    "preset": "ts-jest",
+    "roots": [
+      "<rootDir>"
+    ],
+    "testMatch": [
+      "**/__tests__/**/*.[jt]s?(x)",
+      "**/?(*.)+(spec|test).[tj]s?(x)"
+    ],
+    "testPathIgnorePatterns": [
+      "\\\\node_modules\\\\",
+      "\\\\examples\\\\",
+      "\\\\dist\\\\"
+    ],
+    "moduleNameMapper": {
+      "src/(.*)": "<rootDir>/src/$1"
+    }
   }
 }
