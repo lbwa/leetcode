@@ -1,0 +1,33 @@
+{
+  "name": "leetcode",
+  "version": "0.1.0",
+  "private": true,
+  "description": "The solutions for leetcode",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"no test\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lbwa/leetcode.git"
+  },
+  "keywords": [
+    "leetcode"
+  ],
+  "author": "Bowen <asyncmode@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lbwa/leetcode/issues"
+  },
+  "homepage": "https://github.com/lbwa/leetcode#readme",
+  "prettier": {
+    "semi": false,
+    "tabWidth": 2,
+    "printWidth": 80,
+    "singleQuote": true,
+    "trailingComma": "none"
+  },
+  "dependencies": {
+    "typescript": "^3.7.5"
+  }
+}
