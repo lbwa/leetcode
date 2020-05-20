@@ -61,7 +61,8 @@
       "\\\\dist\\\\"
     ],
     "moduleNameMapper": {
-      "src/(.*)": "<rootDir>/src/$1"
+      "^src/(.*)": "<rootDir>/src/$1",
+      "^data-structures/(.*)": "<rootDir>/data-structures/$1"
     }
   }
 }
