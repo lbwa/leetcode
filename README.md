@@ -8,6 +8,14 @@
 
 The solutions for leetcode.com.
 
+## How to run specific unit-test
+
+```bash
+$ npm t <DIR_NAME_OR_FILE_NAME>
+# eg. to run medium-692
+# npm t medium-692
+```
+
 ## 对撞指针
 
 对撞指针指在有序数组中，将指向最左侧的索引定义 `左指针`，最右侧的索引定义为 `右指针`，然后从两头向中间进行数组遍历。
