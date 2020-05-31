@@ -62,6 +62,7 @@ function fn(list) {
 - [1 两数之和](src/easy-1)
 - [9 回文数](src/easy-9)
 - [20 有效括号](src/easy-20)
+- [101 对称二叉树](src/easy-101)
 - [104 二叉树的最大深度](src/easy-104)
 - [111 二叉树的最小深度](src/easy-111)
 - [206 反转单向链表](src/easy-206)
