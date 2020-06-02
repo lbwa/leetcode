@@ -64,15 +64,20 @@ function fn(list) {
 - [20 有效括号](src/easy-20)
 - [101 对称二叉树](src/easy-101)
 - [104 二叉树的最大深度](src/easy-104)
-  - 递归遍历二叉树
+  - 递归（迭代）遍历二叉树
 - [111 二叉树的最小深度](src/easy-111)
+  - 递归（迭代）遍历二叉树
 - [141 环形链表](src/easy-141)
   - 快慢指针
+- [203 移除链表元素](src/easy-203)
+  - 使用哨兵节点（策略）实现规避头节点的复杂情况处理
+  - 使用快慢指针实现链表节点删除
 - [206 反转单向链表](src/easy-206)
 - [226 翻转二叉树](src/easy-226)
-  - 递归遍历二叉树
+  - 递归（迭代）遍历二叉树
 - [557 反转字符串中的单词 III](src/easy-557)
 - [559 n 叉树的最大深度](src/easy-559)
+  - 递归（迭代）遍历 n 叉树
 
 ### medium
 
@@ -84,4 +89,7 @@ function fn(list) {
   - 找到环形链表的开始节点
 - [347 前 K 个高频元素](src/medium-347)
 - [451 根据字符出现的频率排序](src/medium-451)
+  - [优先队列][github-priority-queue]（基于二叉堆实现）
 - [692 前 K 个高频单词](src/medium-692)
+
+[github-priority-queue]: https://github.com/lbwa/algorithms/tree/master/data-structures/priority-queue
