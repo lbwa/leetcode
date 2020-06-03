@@ -97,5 +97,8 @@ function fn(list) {
 - [451 根据字符出现的频率排序](src/medium-451)
   - [优先队列][github-priority-queue]（基于二叉堆实现）
 - [692 前 K 个高频单词](src/medium-692)
+- [701 二叉搜索树中的插入操作](src/medium-701)
+  - [算法 4th][book-algs4] 中常规的 BST 插入操作
 
 [github-priority-queue]: https://github.com/lbwa/algorithms/tree/master/data-structures/priority-queue
+[book-algs4]: https://algs4.cs.princeton.edu/32bst/
