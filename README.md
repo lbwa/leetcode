@@ -78,6 +78,9 @@ function fn(list) {
 - [557 反转字符串中的单词 III](src/easy-557)
 - [559 n 叉树的最大深度](src/easy-559)
   - 递归（迭代）遍历 n 叉树
+- [703 数据流中的第 K 大的元素](src/easy-703)
+  - 通过维护一个 **有限大小，且大小为 k** 的小顶堆，来实现获取数据流中的第 K 大（而不是第 K 个，区别于 [215](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/) 题）元素（含重复元素）。
+  - 此时小顶堆为目标值，其所有子节点都比根节点大。
 
 ### medium
 
