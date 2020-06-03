@@ -30,7 +30,10 @@
   "dependencies": {},
   "devDependencies": {
     "@types/jest": "^25.1.1",
+    "husky": "^4.2.5",
     "jest": "^25.1.0",
+    "lint-staged": "^10.2.7",
+    "prettier": "^2.0.5",
     "ts-jest": "^25.1.0",
     "typescript": "^3.7.5"
   },
@@ -64,5 +67,15 @@
       "^src/(.*)": "<rootDir>/src/$1",
       "^data-structures/(.*)": "<rootDir>/data-structures/$1"
     }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx,json,md}": [
+      "prettier --write"
+    ]
   }
 }
