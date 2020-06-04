@@ -17,6 +17,7 @@ The solutions for leetcode.com.
 - [Levels](#levels)
   - [easy](#easy)
   - [medium](#medium)
+  - [hard](#hard)
 
 <!-- /TOC -->
 
@@ -99,9 +100,6 @@ function fn(list) {
 - [144 二叉树的前序遍历](src/medium-144)
   - 首先访问根节点，后递归访问左子树，最后递归访问右子树
   - 可通过递归或迭代方式实现
-- [145 二叉树的后序遍历](src/hard-145)
-  - 首先递归访问左子树，后递归访问右子树，最后访问根节点
-  - 可通过递归或迭代方式实现
 - [230 二叉搜索树中第 K 小的元素](src/medium-230)
   - - [算法 4th][book-algs4] 中常规的 BST `选择 select` 操作
 - [347 前 K 个高频元素](src/medium-347)
@@ -110,6 +108,12 @@ function fn(list) {
 - [692 前 K 个高频单词](src/medium-692)
 - [701 二叉搜索树中的插入操作](src/medium-701)
   - [算法 4th][book-algs4] 中常规的 BST `插入 put` 操作
+
+### hard
+
+- [145 二叉树的后序遍历](src/hard-145)
+  - 首先递归访问左子树，后递归访问右子树，最后访问根节点
+  - 可通过递归或迭代方式实现
 
 [github-priority-queue]: https://github.com/lbwa/algorithms/tree/master/data-structures/priority-queue
 [book-algs4]: https://algs4.cs.princeton.edu/32bst/
