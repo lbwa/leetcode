@@ -17,6 +17,23 @@
 输出: [1,3,2]
 进阶:  递归算法很简单，你可以通过迭代算法完成吗？
 
+## 伪代码
+
+```
+栈 stack
+current = root
+
+while(current 不为 null 或 stack 不为空) {
+   while(current) {
+      current 入栈
+      current = current 的左子节点
+   }
+   current = stack 顶帧出栈
+   访问 current
+   current = current 的右子节点
+}
+```
+
 ## References
 
 - [leetcode-cn](https://leetcode-cn.com/problems/binary-tree-inorder-traversal)
