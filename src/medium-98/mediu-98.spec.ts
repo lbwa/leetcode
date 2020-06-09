@@ -24,5 +24,9 @@ describe('98 验证二叉搜索树', () => {
         )
       )
     ).toBeFalsy()
+
+    expect(
+      isValidBST(new BinaryTreeNode(1, null, new BinaryTreeNode(1)))
+    ).toBeFalsy()
   })
 })
