@@ -129,6 +129,9 @@ function fn(list) {
 - [145 二叉树的后序遍历](src/hard-145)
   - 首先递归访问左子树，后递归访问右子树，最后访问根节点
   - 可通过递归或迭代方式实现
+- [297 二叉树的序列化和反序列化](src/hard-297)
+  - 通过前序遍历序列化二叉树，需包含叶子节点的左右 `null` 节点
+  - 通过递归反序列化得到二叉树
 
 [github-priority-queue]: https://github.com/lbwa/algorithms/tree/master/data-structures/priority-queue
 [book-algs4]: https://algs4.cs.princeton.edu/32bst/
