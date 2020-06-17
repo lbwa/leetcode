@@ -118,6 +118,8 @@ function fn(list) {
 - [230 二叉搜索树中第 K 小的元素](src/medium-230)
   - - [算法 4th][book-algs4] 中常规的 BST `选择 select` 操作
 - [347 前 K 个高频元素](src/medium-347)
+- [429 n 叉树的层序遍历](src/medium-429)
+  - 原理同 `medium 102 二叉树的层序遍历（BSF）`
 - [451 根据字符出现的频率排序](src/medium-451)
   - [优先队列][github-priority-queue]（基于二叉堆实现）
 - [692 前 K 个高频单词](src/medium-692)
