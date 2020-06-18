@@ -1,8 +1,8 @@
-export class LinkedListNode {
-  constructor(public val: unknown, public next: LinkedListNode | null) {}
+export class LinkedListNode<T = unknown> {
+  constructor(public val: T, public next: LinkedListNode<T> | null) {}
 }
 
-export function createLinkedList(max: number): LinkedListNode | null {
+export function createLinkedList(max: number): LinkedListNode<number> | null {
   if (max === 0) return null
-  return new LinkedListNode(max, createLinkedList(--max))
+  return new LinkedListNode<number>(max, createLinkedList(--max))
 }
