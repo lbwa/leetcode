@@ -140,6 +140,8 @@ function fn(list) {
 - [692 前 K 个高频单词](src/medium-692)
 - [701 二叉搜索树中的插入操作](src/medium-701)
   - [算法 4th][book-algs4] 中常规的 BST `插入 put` 操作
+- [1008 先序遍历构造二叉搜索树](src/medium-1008)
+  - 本质上是 [算法 4th][book-algs4] 中常规的 BST 的 `插入 put` 节点操作
 
 ### hard
 
