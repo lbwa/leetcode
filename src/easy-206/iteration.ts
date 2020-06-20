@@ -1,6 +1,4 @@
-export class LinkedListNode<E> {
-  constructor(public val: E, public next: LinkedListNode<E> | null) {}
-}
+import { LinkedListNode } from 'data-structures/linked-list'
 
 /**
  * 反转单向链表
@@ -14,10 +12,10 @@ export function reverseLinkedList<E>(head: LinkedListNode<E>) {
   let current: LinkedListNode<E> | null = head
   while (current) {
     // 临时保存 next 节点，以用于在完成交换后，恢复迭代
-    const temp: LinkedListNode<E> | null = current.next
+    const next: LinkedListNode<E> | null = current.next
     current.next = prev
     prev = current
-    current = temp
+    current = next
   }
   return prev
 }
