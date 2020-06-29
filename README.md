@@ -8,19 +8,6 @@
 
 The solutions for leetcode.com.
 
-<!-- TOC -->
-
-- [How to run specific unit-test](#how-to-run-specific-unit-test)
-- [双指针策略](#%E5%8F%8C%E6%8C%87%E9%92%88%E7%AD%96%E7%95%A5)
-  - [对撞指针](#%E5%AF%B9%E6%92%9E%E6%8C%87%E9%92%88)
-  - [快慢指针](#%E5%BF%AB%E6%85%A2%E6%8C%87%E9%92%88)
-- [Levels](#levels)
-  - [easy](#easy)
-  - [medium](#medium)
-  - [hard](#hard)
-
-<!-- /TOC -->
-
 ## How to run specific unit-test
 
 ```bash
@@ -177,3 +164,11 @@ function fn(list) {
 
 [github-priority-queue]: https://github.com/lbwa/algorithms/tree/master/data-structures/priority-queue
 [book-algs4]: https://algs4.cs.princeton.edu/32bst/
+
+## Tags
+
+### 滑动窗口
+
+#### medium
+
+- [3 无重复字符的最长子串](src/medium-3)
