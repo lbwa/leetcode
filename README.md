@@ -40,6 +40,8 @@ $ npm t <DIR_NAME_OR_FILE_NAME>
 - [700 二叉搜索树中的搜索](src/easy-700)
   - BST 中，左侧子树节点始终小于当前节点，右侧反之
   - 通过递归实现 BST 搜索
+- [112 路径总和](src/easy-112)
+  - 层序遍历实现路径求和
 
 ### medium
 
