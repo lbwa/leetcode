@@ -14,6 +14,8 @@ func traversal(root *structures.BinaryTreeNode, answer *[]int) {
 		return
 	}
 	traversal(root.Left, answer)
-	*answer = append(*answer, root.Val)
+	// type assertion
+	// https://tour.golang.org/methods/15
+	*answer = append(*answer, root.Val.(int))
 	traversal(root.Right, answer)
 }
