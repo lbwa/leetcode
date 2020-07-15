@@ -43,9 +43,11 @@ func MinWindow(s, t string) string {
 			left++
 			// 因为缩小了窗口，故要移除对应的字符频率
 			if _, ok := needsMap[deleted]; ok {
+				// ！易错点
 				if windowMap[deleted] == needsMap[deleted] {
 					validsInWindow--
 				}
+				// ！易错点
 				windowMap[deleted]--
 			}
 		}
