@@ -8,6 +8,36 @@
 
 `leetcode` 解答。
 
+<!-- TOC -->
+
+- [How to run specific unit-test](#how-to-run-specific-unit-test)
+- [树](#%E6%A0%91)
+  - [easy](#easy)
+  - [medium](#medium)
+  - [hard](#hard)
+- [链表](#%E9%93%BE%E8%A1%A8)
+  - [easy](#easy)
+  - [medium](#medium)
+- [二分查找](#%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE)
+  - [easy](#easy)
+- [滑动窗口](#%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3)
+  - [medium](#medium)
+  - [hard](#hard)
+- [双指针](#%E5%8F%8C%E6%8C%87%E9%92%88)
+  - [easy](#easy)
+  - [对撞指针](#%E5%AF%B9%E6%92%9E%E6%8C%87%E9%92%88)
+  - [快慢指针](#%E5%BF%AB%E6%85%A2%E6%8C%87%E9%92%88)
+- [二叉堆/优先队列](#%E4%BA%8C%E5%8F%89%E5%A0%86%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97)
+  - [easy](#easy)
+  - [medium](#medium)
+- [动态规划](#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92)
+  - [easy](#easy)
+  - [medium](#medium)
+- [Difficulty level](#difficulty-level)
+  - [easy](#easy)
+
+<!-- /TOC -->
+
 ## How to run specific unit-test
 
 ```bash
@@ -138,6 +168,13 @@ $ npm t <DIR_NAME_OR_FILE_NAME>
 - [141 环形链表 II](src/medium-142)
 
   - 找到环形链表的开始节点
+
+## 二分查找
+
+### easy
+
+- [35 搜索插入位置](src/easy-35)
+  - 经典二分查找
 
 ## 滑动窗口
 
