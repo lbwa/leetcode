@@ -45,7 +45,7 @@ func twoSumTarget(nums []int, start int, target int) [][]int {
 				low++
 			}
 			for low < high && (nums[high] == right) {
-				right--
+				high--
 			}
 		}
 	}
