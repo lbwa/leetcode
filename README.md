@@ -48,7 +48,8 @@ $ npm t <DIR_NAME_OR_FILE_NAME>
 ```
 
 [github-priority-queue]: https://github.com/lbwa/algorithms/tree/master/data-structures/priority-queue
-[book-algs4]: https://algs4.cs.princeton.edu/32bst/
+[book-algs4-bst]: https://algs4.cs.princeton.edu/32bst/
+[book-algs4-pq]: https://algs4.cs.princeton.edu/24pq/
 
 ## 树
 
@@ -85,7 +86,7 @@ $ npm t <DIR_NAME_OR_FILE_NAME>
     - 所有左子节点都小于父节点，大于 `-Infinity`
     - 所有右子节点都大于父节点，小于 `Infinity`
   - （推荐）直接使用二叉树的中序（迭代）遍历来确定当前节点是否大于前一节点，一旦为 `false`，那么可退出迭代，并返回结果当前树并非二叉搜索树
-- [102 二叉树的层序遍历（广度优先搜索 BSF）](src/medium-102)
+- [102 二叉树的层序遍历（广度优先搜索 BFS）](src/medium-102)
   - 每次迭代时都取第 `Sn` 层的 `n` 个节点进行迭代，而不再像前中后序遍历那样每次取一个节点。
 - [109 将有序链表转换二叉搜索树](src/medium-109)
   - 原理同 `easy 104`，为了构建平衡的二叉搜索树，那么取链表的中项（通过快慢指针找到）作为左右子树的根节点。
@@ -93,11 +94,16 @@ $ npm t <DIR_NAME_OR_FILE_NAME>
   - 首先访问根节点，后递归访问左子树，最后递归访问右子树
   - 可通过递归或迭代方式实现
 - [230 二叉搜索树中第 K 小的元素](src/medium-230)
-  - [算法 4th][book-algs4] 中常规的 BST `选择 select` 操作
+  - [算法 4th - BST][book-algs4-bst] 中常规的 BST `选择 select` 操作
+- [429 n 叉树的层序遍历](src/medium-429)
+  - 原理同 `medium 102 二叉树的层序遍历（BFS）`
+- [662 二叉树最大宽度](src/medium-662)
+  - 借鉴在 `PriorityQueue` 及其相似二叉树结构通过顺序存储时，`index` 节点的左子节点为 `2*index`, 右子节点为 `2*index + 1`<sup>[算法 4th - PQ][book-algs4-pq]</sup>
+  - 通过层序遍历（广度优先搜索，BFS）时队列中的首项和末项的索引差值加一得到二叉树的最大宽度（最底层叶子节点的跨度）。
 - [701 二叉搜索树中的插入操作](src/medium-701)
-  - [算法 4th][book-algs4] 中常规的 BST `插入 put` 操作
+  - [算法 4th - BST][book-algs4-bst] 中常规的 BST `插入 put` 操作
 - [1008 先序遍历构造二叉搜索树](src/medium-1008)
-  - 本质上是 [算法 4th][book-algs4] 中常规的 BST 的 `插入 put` 节点操作
+  - 本质上是 [算法 4th - BST][book-algs4-bst] 中常规的 BST 的 `插入 put` 节点操作
 
 ### hard
 
@@ -107,8 +113,6 @@ $ npm t <DIR_NAME_OR_FILE_NAME>
 - [297 二叉树的序列化和反序列化](src/hard-297)
   - 通过前序遍历序列化二叉树，需包含叶子节点的左右 `null` 节点
   - 通过递归反序列化得到二叉树
-- [429 n 叉树的层序遍历](src/medium-429)
-  - 原理同 `medium 102 二叉树的层序遍历（BSF）`
 
 ## 链表
 
@@ -116,6 +120,10 @@ $ npm t <DIR_NAME_OR_FILE_NAME>
 
 ### easy
 
+- [26 删除有序数组中的重复项](src/easy-26)
+  - 在处理数组项删除问题时，尽量避免直接删除数组中间项，而是排列到尾部删除
+  - 将所有重复项向尾部排列
+  - 维护 `[0, ... slow]` 即可实现重复项删除
 - [83 删除有序链表中的重复元素](src/easy-83)
   - 原理同 `26 删除有序数组中的重复项`
   - 维持 `头部 ~ slow` 部分为唯一项部分
@@ -144,10 +152,6 @@ $ npm t <DIR_NAME_OR_FILE_NAME>
 
 - [19 删除链表倒数第 k 个节点](src/medium-19)
   - 快慢指针
-- [26 删除有序数组中的重复项](src/easy-26)
-  - 在处理数组项删除问题时，尽量避免直接删除数组中间项，而是排列到尾部删除
-  - 将所有重复项向尾部排列
-  - 维护 `[0, ... slow]` 即可实现重复项删除
 - [74 搜索二维矩阵](src/medium-74)
   - 基于有序二维矩阵的查找
 - [82 删除有序链表中的重复项 II](src/medium-82)
