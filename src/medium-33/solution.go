@@ -12,17 +12,17 @@ func search(nums []int, target int) int {
 			return mid
 		}
 		// 中点在旋转数组前半部分递增序列
-		if nums[0] <= nums[mid] {
-			// target 值在 0 ~ mid 之间
-			if nums[0] <= target && target < nums[mid] {
+		if nums[low] <= nums[mid] {
+			// target 值在 low ~ mid 之间
+			if nums[low] <= target && target < nums[mid] {
 				high = mid - 1
 			} else {
 				low = mid + 1
 			}
 			// 中点在旋转数组后半部分递增序列
 		} else {
-			// target 在 mid ~ len(nums)-1 之间
-			if nums[mid] < target && target <= nums[len(nums)-1] {
+			// target 在 mid ~ high 之间
+			if nums[mid] < target && target <= nums[high] {
 				low = mid + 1
 			} else {
 				high = mid - 1
