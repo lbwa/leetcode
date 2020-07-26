@@ -182,6 +182,8 @@ $ npm t <DIR_NAME_OR_FILE_NAME>
 
 - [35 搜索插入位置](src/easy-35)
   - 经典二分查找
+- [704 二分查找](src/easy-704)
+  - 经典二分查找
 
 ### medium
 
