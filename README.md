@@ -291,6 +291,8 @@ function fn(list) {
 
 ### medium
 
+- [215 数组中的第 K 个最大元素](src/medium-215)
+  - 通过快排或维护一个 `K` 大的二叉堆实现，找到第 K 个最大元素
 - [347 前 K 个高频元素](src/medium-347)
 - [451 根据字符出现的频率排序](src/medium-451)
   - [优先队列][github-priority-queue]（基于二叉堆实现）
