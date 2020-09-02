@@ -37,6 +37,8 @@
 - [动态规划](#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92)
   - [easy](#easy)
   - [medium](#medium)
+- [前缀树](#%E5%89%8D%E7%BC%80%E6%A0%91)
+  - [medium](#medium)
 - [Difficulty level](#difficulty-level)
   - [easy](#easy)
 
@@ -373,6 +375,15 @@ function fn(list) {
   - 通过滚动数组优化空间复杂度，实现在迭代过程中覆写中间结果，达到优化空间的目的。
 - [64 最小路径和](src/medium-64)
   - 与 `62` 的状态方程类似，不同的是，矩阵项的值为 `grid` 参数矩阵中路径上的项的值的和。
+
+## 前缀树
+
+> trie tree，亦称字典树
+
+### medium
+
+- [208 实现 Trie 前缀树](src/medium-208)
+  - 实现前缀树的关键在于迭代创建字典前缀 map
 
 ## Difficulty level
 
