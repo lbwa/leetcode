@@ -384,6 +384,9 @@ function fn(list) {
 
 - [208 实现 Trie 前缀树](src/medium-208)
   - 实现前缀树的关键在于迭代创建字典前缀 map
+- [677 键值映射](src/medium-677)
+  - 通过 `trie tree` 的 `insert` 实现节点新建
+  - 通过 `trie tree` 的 `search` 实现找到以参数变量 `prefix` 开头的前缀节点，通过 `DFS` 求得该节点的所有后代节点的 `val` 之和，最终得到 `sum` 方法的输出
 
 ## Difficulty level
 
