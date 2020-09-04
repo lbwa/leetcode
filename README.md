@@ -91,6 +91,8 @@ $ npm t <DIR_NAME_OR_FILE_NAME>
   - 通过递归实现 BST 搜索
 - [112 路径总和](src/easy-112)
   - 层序遍历实现路径求和
+- [257 二叉树的所有路径](src/easy-257)
+  - 即仅在遍历至叶子节点时，`push` 路径，否则继续加长路径
 
 ### medium
 
