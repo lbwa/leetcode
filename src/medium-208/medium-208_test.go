@@ -13,4 +13,12 @@ func TestTrie(t *testing.T) {
 	shared.Expect(t, tree.StartsWith("app"), true)
 	tree.Insert("app")
 	shared.Expect(t, tree.Search("app"), true)
+
+	tree0 := Create()
+	tree0.Insert("apple")
+	shared.Expect(t, tree0.Search("apple"), true)
+	shared.Expect(t, tree0.Search("app"), false)
+	shared.Expect(t, tree0.StartsWith("app"), true)
+	tree0.Insert("app")
+	shared.Expect(t, tree0.Search("app"), true)
 }

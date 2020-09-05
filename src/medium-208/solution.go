@@ -6,7 +6,7 @@ type Trie struct {
 	child  map[rune]*Trie
 }
 
-// CreateTrie is used to create a trie tree node
+// CreateTrie is u`sed to create a trie tree node
 func CreateTrie() Trie {
 	return Trie{isWord: false, child: make(map[rune]*Trie)}
 }
