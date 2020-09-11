@@ -39,6 +39,7 @@
   - [medium](#medium)
 - [前缀树](#%E5%89%8D%E7%BC%80%E6%A0%91)
   - [medium](#medium)
+- [回溯](#%E5%9B%9E%E6%BA%AF)
 - [Difficulty level](#difficulty-level)
   - [easy](#easy)
 
@@ -389,6 +390,11 @@ function fn(list) {
 - [677 键值映射](src/medium-677)
   - 通过 `trie tree` 的 `insert` 实现节点新建
   - 通过 `trie tree` 的 `search` 实现找到以参数变量 `prefix` 开头的前缀节点，通过 `DFS` 求得该节点的所有后代节点的 `val` 之和，最终得到 `sum` 方法的输出
+
+## 回溯
+
+- [39 组合总和](src/medium-39)
+  - 枚举过程本身可看作是决策树遍历
 
 ## Difficulty level
 
