@@ -40,6 +40,7 @@
 - [前缀树](#%E5%89%8D%E7%BC%80%E6%A0%91)
   - [medium](#medium)
 - [回溯](#%E5%9B%9E%E6%BA%AF)
+  - [medium](#medium)
 - [Difficulty level](#difficulty-level)
   - [easy](#easy)
 
@@ -94,6 +95,8 @@ $ npm t <DIR_NAME_OR_FILE_NAME>
   - 层序遍历实现路径求和
 - [257 二叉树的所有路径](src/easy-257)
   - 即仅在遍历至叶子节点时，`push` 路径，否则继续加长路径
+- [637 二叉树层的平均值](src/easy-637)
+  - 通过二叉树的层序遍历得到每层节点和与节点数，在求平均值前，将前二者转换为 `float64` 类型后，再求得当前层的平均值
 
 ### medium
 
@@ -392,6 +395,8 @@ function fn(list) {
   - 通过 `trie tree` 的 `search` 实现找到以参数变量 `prefix` 开头的前缀节点，通过 `DFS` 求得该节点的所有后代节点的 `val` 之和，最终得到 `sum` 方法的输出
 
 ## 回溯
+
+### medium
 
 - [39 组合总和](src/medium-39)
   - 枚举过程本身可看作是决策树遍历
