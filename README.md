@@ -403,6 +403,7 @@ function fn(list) {
 
 - [39 组合总和](src/medium-39)
   - 枚举过程本身可看作是决策树遍历
+- [78 子集](src/medium-78)
 
 ## Difficulty level
 
