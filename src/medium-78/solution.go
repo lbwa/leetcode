@@ -33,3 +33,22 @@ func subsets0(nums []int) (answer [][]int) {
 	}
 	return
 }
+
+func subsets1(nums []int) (answer [][]int) {
+	set := []int{}
+	var dfs func(int)
+	dfs = func(current int) {
+		if current == len(nums) {
+			answer = append(answer, append([]int(nil), set...))
+			return
+		}
+		// 选择当前项，并步进到下一项
+		set = append(set, nums[current])
+		dfs(current + 1)
+		// 不选择当前项，并步进到下一项
+		set = set[:len(set)-1]
+		dfs(current + 1)
+	}
+	dfs(0)
+	return
+}

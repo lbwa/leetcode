@@ -402,8 +402,10 @@ function fn(list) {
 ### medium
 
 - [39 组合总和](src/medium-39)
+  - 典型组合型回溯算法
   - 枚举过程本身可看作是决策树遍历
 - [78 子集](src/medium-78)
+  - 典型组合型回溯算法
 
 ## Difficulty level
 
