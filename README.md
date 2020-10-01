@@ -41,6 +41,8 @@
   - [medium](#medium)
 - [回溯](#%E5%9B%9E%E6%BA%AF)
   - [medium](#medium)
+- [散列映射](#%E6%95%A3%E5%88%97%E6%98%A0%E5%B0%84)
+  - [easy](#easy)
 - [Difficulty level](#difficulty-level)
   - [easy](#easy)
 
@@ -409,6 +411,8 @@ function fn(list) {
 
 ## 回溯
 
+> backtrack
+
 ### medium
 
 - [39 组合总和](src/medium-39)
@@ -416,6 +420,15 @@ function fn(list) {
   - 枚举过程本身可看作是决策树遍历
 - [78 子集](src/medium-78)
   - 典型组合型回溯算法
+
+## 散列映射
+
+> hash mapping，散列映射，哈希
+
+### easy
+
+- [771 宝石与石头](src/easy-771)
+  - 使用哈希映射记录宝石种类，迭代石头得到最终的宝石数量
 
 ## Difficulty level
 
