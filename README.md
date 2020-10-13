@@ -168,6 +168,8 @@ $ npm t <DIR_NAME_OR_FILE_NAME>
   - 本质上是 [算法 4th - BST][book-algs4-bst] 中常规的 BST 的 `插入 put` 节点操作
 - [1038 从二叉搜索树到更大和树](src/medium-1038)
   - 同 `538`，反向中序遍历得到结果树
+- [1609 奇偶数](src/medium-1609)
+  - 基于层序遍历（BST）逐层检测节点是否符合奇偶数定义
 
 ### hard
 
