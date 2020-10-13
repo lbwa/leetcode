@@ -14,7 +14,7 @@ func convertBST(root *node) *node {
 			return root
 		}
 		dfs(root.Right)
-		prev += root.Val.(int)
+		prev += root.Val
 		root.Val = prev
 		dfs(root.Left)
 		return root

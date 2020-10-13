@@ -18,7 +18,7 @@ func rightSizeView(root *structures.BinaryTreeNode) []int {
 
 			// 二叉树右视图，即仅保存每层节点的最后一个节点
 			if i == levelSize-1 {
-				answer = append(answer, current.Val.(int))
+				answer = append(answer, current.Val)
 			}
 
 			if current.Left != nil {

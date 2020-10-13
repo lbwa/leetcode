@@ -9,9 +9,9 @@ type node = structures.BinaryTreeNode
 func lowestCommonAncestor(root, p, q *node) (ancestor *node) {
 	ancestor = root
 	for {
-		if p.Val.(int) < ancestor.Val.(int) && p.Val.(int) > ancestor.Val.(int) {
+		if p.Val < ancestor.Val && p.Val > ancestor.Val {
 			ancestor = ancestor.Left
-		} else if p.Val.(int) > ancestor.Val.(int) && q.Val.(int) > ancestor.Val.(int) {
+		} else if p.Val > ancestor.Val && q.Val > ancestor.Val {
 			ancestor = ancestor.Right
 		} else {
 			return

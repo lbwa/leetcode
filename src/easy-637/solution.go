@@ -17,7 +17,7 @@ func averageOfLevels(root *node) (answer []float64) {
 		for i := 0; i < levelSize; i++ {
 			current := queue[0]
 			queue = queue[1:]
-			levelSum += current.Val.(int)
+			levelSum += current.Val
 			if current.Left != nil {
 				queue = append(queue, current.Left)
 			}

@@ -15,10 +15,10 @@ func getMinimumDifference(root *node) int {
 			return
 		}
 		dfs(root.Left)
-		if prev != -1 && (root.Val.(int)-prev < answer) {
-			answer = root.Val.(int) - prev
+		if prev != -1 && (root.Val-prev < answer) {
+			answer = root.Val - prev
 		}
-		prev = root.Val.(int)
+		prev = root.Val
 		dfs(root.Right)
 	}
 	dfs(root)

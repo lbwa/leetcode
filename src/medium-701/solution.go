@@ -10,9 +10,9 @@ func insertIntoBST(root *node, val int) *node {
 	if root == nil {
 		return &node{Val: val}
 	}
-	if root.Val.(int) > val {
+	if root.Val > val {
 		root.Left = insertIntoBST(root.Left, val)
-	} else if root.Val.(int) < val {
+	} else if root.Val < val {
 		root.Right = insertIntoBST(root.Right, val)
 	}
 	return root

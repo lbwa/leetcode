@@ -15,10 +15,10 @@ func minDiffInBST(root *node) int {
 			return
 		}
 		dfs(root.Left)
-		if prev != -1 && (root.Val.(int)-prev < ans) {
-			ans = root.Val.(int) - prev
+		if prev != -1 && (root.Val-prev < ans) {
+			ans = root.Val - prev
 		}
-		prev = root.Val.(int)
+		prev = root.Val
 		dfs(root.Right)
 	}
 	dfs(root)

@@ -16,7 +16,7 @@ func createPath(root *node, path string, paths *[]string) {
 	if root == nil {
 		return
 	}
-	path += strconv.Itoa(root.Val.(int))
+	path += strconv.Itoa(root.Val)
 	if root.Left == nil && root.Right == nil {
 		*paths = append(*paths, path)
 	} else {

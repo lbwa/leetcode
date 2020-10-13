@@ -22,10 +22,10 @@ func isValidBSTByIteration(root *node) bool {
 		current = stack[topFrameIndex]
 		stack = stack[:topFrameIndex]
 
-		if current.Val.(int) <= prevNodeVal {
+		if current.Val <= prevNodeVal {
 			return false
 		}
-		prevNodeVal = current.Val.(int)
+		prevNodeVal = current.Val
 
 		current = current.Right
 	}

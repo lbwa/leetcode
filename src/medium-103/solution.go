@@ -17,7 +17,7 @@ func zigzagLevelOrder(root *structures.BinaryTreeNode) [][]int {
 		for i := 0; i < levelSize; i++ {
 			current := queue[0]
 			queue = queue[1:]
-			answer[levelIndex] = append(answer[levelIndex], current.Val.(int))
+			answer[levelIndex] = append(answer[levelIndex], current.Val)
 			if current.Left != nil {
 				queue = append(queue, current.Left)
 			}

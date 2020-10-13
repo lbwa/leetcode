@@ -27,16 +27,16 @@ func isEvenOddTree(root *node) bool {
 			queue = queue[1:]
 
 			if isOdd(levelIndex) {
-				if isOdd(current.Val.(int)) || (current.Val.(int) >= prev) {
+				if isOdd(current.Val) || (current.Val >= prev) {
 					return false
 				}
 			} else {
-				if !isOdd(current.Val.(int)) || (current.Val.(int) <= prev) {
+				if !isOdd(current.Val) || (current.Val <= prev) {
 					return false
 				}
 			}
 
-			prev = current.Val.(int)
+			prev = current.Val
 
 			if current.Left != nil {
 				queue = append(queue, current.Left)

@@ -10,7 +10,7 @@ type BinaryTreeNode struct {
 		https://blog.golang.org/laws-of-reflection
 		https://golang.org/ref/spec#Interface_types
 	*/
-	Val   interface{}
+	Val   int
 	Left  *BinaryTreeNode
 	Right *BinaryTreeNode
 }

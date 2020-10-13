@@ -14,7 +14,7 @@ func preorderTraversal(root *structures.BinaryTreeNode) []int {
 	for len(stack) > 0 {
 		currentIndex := len(stack) - 1
 		current := stack[currentIndex]
-		stack, answer = stack[:currentIndex], append(answer, current.Val.(int))
+		stack, answer = stack[:currentIndex], append(answer, current.Val)
 
 		if current.Right != nil {
 			stack = append(stack, current.Right)

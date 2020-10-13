@@ -24,7 +24,7 @@ func IterativeInOrderTraversal(root *structures.BinaryTreeNode) []int {
 		stack = stack[:latest]
 		// type assertion
 		// https://tour.golang.org/methods/15
-		answer = append(answer, current.Val.(int))
+		answer = append(answer, current.Val)
 		current = current.Right
 	}
 
