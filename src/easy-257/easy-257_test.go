@@ -11,4 +11,10 @@ func TestSolution(t *testing.T) {
 		Left:  &node{Val: 2, Right: &node{Val: 5}},
 		Right: &node{Val: 3},
 	}), []string{"1->2->5", "1->3"})
+
+	shared.Expect(t, binaryTreePaths0(&node{
+		Val:   1,
+		Left:  &node{Val: 2, Right: &node{Val: 5}},
+		Right: &node{Val: 3},
+	}), []string{"1->2->5", "1->3"})
 }
