@@ -13,4 +13,9 @@ func TestSolution(t *testing.T) {
 		Left:  &node{Val: 2},
 		Right: &node{Val: 3},
 	}))
+	assert.Equal(25, sumNumbers0(&node{
+		Val:   1,
+		Left:  &node{Val: 2},
+		Right: &node{Val: 3},
+	}))
 }
