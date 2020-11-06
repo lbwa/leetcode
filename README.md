@@ -43,6 +43,8 @@
   - [medium](#medium)
 - [散列映射](#%E6%95%A3%E5%88%97%E6%98%A0%E5%B0%84)
   - [easy](#easy)
+- [排序](#%E6%8E%92%E5%BA%8F)
+  - [medium](#medium)
 - [Difficulty level](#difficulty-level)
   - [easy](#easy)
 
@@ -453,6 +455,15 @@ function fn(list) {
 
 - [771 宝石与石头](src/easy-771)
   - 使用哈希映射记录宝石种类，迭代石头得到最终的宝石数量
+
+## 排序
+
+> sort, 排序
+
+### medium
+
+- [1637 两点之间不包含任何点的最宽垂直面积](src/medium-1637)
+  - 即求得所有点序列中，相邻两点间的最大间距，故排序后，遍历求得最大差值
 
 ## Difficulty level
 
