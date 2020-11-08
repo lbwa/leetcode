@@ -12,26 +12,24 @@ const charMap: Record<string, string> = {
  * @param string 待测字符串
  */
 export function isValid(string: string) {
-  {
-    if (string.length < 1) return true
+  if (string.length < 1) return true
 
-    const stack = []
+  const stack = []
 
-    for (const char of string) {
-      // 为收括号时
-      if (charMap[char]) {
-        stack.push(char)
-        continue
-      }
-      // 取栈顶括号的收括号匹配当前 char
-      if (charMap[stack[stack.length - 1]] === char) {
-        stack.pop()
-        continue
-      }
-      // 与栈顶的括号不匹配，跳出判断，返回 false
-      return false
+  for (const char of string) {
+    // 为收括号时
+    if (charMap[char]) {
+      stack.push(char)
+      continue
     }
-
-    return stack.length === 0
+    // 取栈顶括号的收括号匹配当前 char
+    if (charMap[stack[stack.length - 1]] === char) {
+      stack.pop()
+      continue
+    }
+    // 与栈顶的括号不匹配，跳出判断，返回 false
+    return false
   }
+
+  return stack.length === 0
 }
