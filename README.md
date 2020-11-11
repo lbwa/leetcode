@@ -385,7 +385,7 @@ function fn(list) {
 - [451 根据字符出现的频率排序](src/medium-451)
   - [优先队列][github-priority-queue]（基于二叉堆实现）
 - [692 前 K 个高频单词](src/medium-692)
-- [937 最接近原点的 k 个点](src/medium-937)
+- [973 最接近原点的 k 个点](src/medium-973)
   - 维护一个大小为 k 的二叉堆（大顶堆）
 
 ## 动态规划
