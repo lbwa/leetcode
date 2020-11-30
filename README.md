@@ -45,6 +45,8 @@
   - [easy](#easy)
 - [排序](#%E6%8E%92%E5%BA%8F)
   - [medium](#medium)
+- [贪心算法](#%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95)
+  - [medium](#medium)
 - [Difficulty level](#difficulty-level)
   - [easy](#easy)
 
@@ -468,6 +470,13 @@ function fn(list) {
 
 - [1637 两点之间不包含任何点的最宽垂直面积](src/medium-1637)
   - 即求得所有点序列中，相邻两点间的最大间距，故排序后，遍历求得最大差值
+
+## 贪心算法
+
+### medium
+
+- [767 重构字符串](src/medium-767)
+  - 基于最大堆，每次取频次最高两位组成字符串的一部分；其中出现最多的字符不能超过字符串长度的一半，否则必有重复
 
 ## Difficulty level
 
