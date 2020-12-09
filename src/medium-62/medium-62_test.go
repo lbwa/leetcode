@@ -1,14 +1,15 @@
 package medium62
 
-import "testing"
+import (
+	"testing"
 
-func expect(t *testing.T, got, want int) {
-	if got != want {
-		t.Errorf(`got %d, want %d`, got, want)
-	}
-}
+	"github.com/stretchr/testify/assert"
+)
 
 func TestSolution(t *testing.T) {
-	expect(t, uniquePaths(3, 2), 3)
-	expect(t, uniquePaths(7, 3), 28)
+	assert := assert.New(t)
+	assert.Equal(uniquePaths(3, 2), 3)
+	assert.Equal(uniquePaths(7, 3), 28)
+	assert.Equal(uniquePathsByScrollArray(3, 2), 3)
+	assert.Equal(uniquePathsByScrollArray(7, 3), 28)
 }
