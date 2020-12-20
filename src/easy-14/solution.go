@@ -1,11 +1,4 @@
-package main
-
-import "fmt"
-
-func main() {
-	fmt.Println(longestCommonPrefix([]string{`flower`, `flow`, `flight`})) // `fl`
-	fmt.Println(longestCommonPrefix([]string{`dog`, `racecar`, `car`}))    // ``
-}
+package easy14
 
 func longestCommonPrefix(strs []string) string {
 	if len(strs) < 1 {
