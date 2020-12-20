@@ -1,0 +1,40 @@
+name: Golang tests
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Go 1.x
+        uses: actions/setup-go@v2
+        with:
+          go-version: ^1.13
+
+      - name: Check out code into the Go module directory
+        uses: actions/checkout@v2
+
+      - name: Get dependencies
+        run: |
+          go get -v -t -d ./...
+          if [ -f Gopkg.toml ]; then
+              # curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
+              curl https://cdn.jsdelivr.net/gh/golang/dep@master/install.sh | sh
+              dep ensure
+          fi
+
+      - name: Build
+        run: go build -v ./...
+
+      - name: Test
+        # see https://stackoverflow.com/a/28031651/11708999
+        # see https://stackoverflow.com/a/21725603/11708999
+        # see https://golang.org/cmd/go/#hdr-Package_lists_and_patterns
+        # go help packages
+        # An import path is a pattern if it includes one or more "..." wildcards, each of which can match any string, including the empty string and strings containing slashes. Such a pattern expands to all package directories found in the GOPATH trees with names matching the patterns.
+        run: go test -cover -v ./...

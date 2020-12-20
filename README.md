@@ -4,6 +4,9 @@
   <a href="https://github.com/lbwa/leetcode/actions">
     <img alt="unit tests" src="https://github.com/lbwa/leetcode/workflows/Unit%20tests/badge.svg">
   </a>
+  <a href="https://github.com/lbwa/leetcode/actions">
+    <img alt="golang tests" src="https://github.com/lbwa/leetcode/workflows/Golang%20tests/badge.svg">
+  </a>
 </p>
 
 `leetcode` 解答。
