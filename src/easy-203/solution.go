@@ -4,9 +4,10 @@ import (
 	structures "leetcode-solutions/data-structures"
 )
 
-// RemoveElement is used to delete items from singly linked list
-func RemoveElement(head *structures.LinkedListNode, val int) *structures.LinkedListNode {
-	sentinel := &structures.LinkedListNode{Val: -1, Next: head}
+type node = structures.LinkedListNode
+
+func removeElement(head *node, val int) *node {
+	sentinel := &node{Val: -1, Next: head}
 	prev := sentinel
 	current := sentinel.Next
 
