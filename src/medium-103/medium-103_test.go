@@ -22,8 +22,8 @@ func TestSolution(t *testing.T) {
 			Right: &structures.BinaryTreeNode{Val: 7},
 		},
 	}), [][]int{
-		[]int{3},
-		[]int{20, 9},
-		[]int{15, 7},
+		{3},
+		{20, 9},
+		{15, 7},
 	})
 }
