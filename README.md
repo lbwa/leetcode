@@ -490,6 +490,13 @@ function fn(list) {
 - [767 重构字符串](src/medium-767)
   - 基于最大堆，每次取频次最高两位组成字符串的一部分；其中出现最多的字符不能超过字符串长度的一半，否则必有重复
 
+### hard
+
+- [135 分发糖果](src/hard-135)
+  - 基于题意，抽象化条件为：
+    1. 从头到尾扫描，当 ratings[i-1] < ratings[i] 时，i 号学生糖果数量将比 i-1 号多
+    1. 从尾到头扫描，当 ratings[i] > ratings[i+1] 时，i 号糖果将比 i+1 号糖果多
+
 ## Difficulty level
 
 ### easy
