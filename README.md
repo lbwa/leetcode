@@ -502,6 +502,13 @@ function fn(list) {
     1. 从头到尾扫描，当 ratings[i-1] < ratings[i] 时，i 号学生糖果数量将比 i-1 号多
     1. 从尾到头扫描，当 ratings[i] > ratings[i+1] 时，i 号糖果将比 i+1 号糖果多
 
+## 数组
+
+### medium
+
+- [189 旋转数组](src/medium-189)
+  - 对于超出数组长度的移动，通过 k % length，得到实际的移动步数，进而得到跳过周期的优化
+
 ## Difficulty level
 
 ### easy
