@@ -50,6 +50,9 @@
   - [medium](#medium)
 - [贪心算法](#%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95)
   - [medium](#medium)
+  - [hard](#hard)
+- [数组](#%E6%95%B0%E7%BB%84)
+  - [medium](#medium)
 - [Difficulty level](#difficulty-level)
   - [easy](#easy)
 
@@ -508,6 +511,7 @@ function fn(list) {
 
 - [189 旋转数组](src/medium-189)
   - 对于超出数组长度的移动，通过 k % length，得到实际的移动步数，进而得到跳过周期的优化
+  - 解法二，通过三次数组翻转实现旋转数组
 
 ## Difficulty level
 
