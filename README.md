@@ -53,6 +53,8 @@
   - [hard](#hard)
 - [数组](#%E6%95%B0%E7%BB%84)
   - [medium](#medium)
+- [位操作](#%E4%BD%8D%E6%93%8D%E4%BD%9C)
+  - [medium](#medium)
 - [Difficulty level](#difficulty-level)
   - [easy](#easy)
 
@@ -537,6 +539,14 @@ function fn(list) {
 - [189 旋转数组](src/medium-189)
   - 对于超出数组长度的移动，通过 k % length，得到实际的移动步数，进而得到跳过周期的优化
   - 解法二，通过三次数组翻转实现旋转数组
+
+## 位操作
+
+> bitwise
+
+### medium
+
+- [137 只出现一次的数字 II](src/medium-137)
 
 ## Difficulty level
 
