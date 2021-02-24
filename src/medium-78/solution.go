@@ -52,3 +52,18 @@ func subsets1(nums []int) (answer [][]int) {
 	dfs(0)
 	return
 }
+
+func subsets2(nums []int) (ans [][]int) {
+	n := len(nums)
+	var dfs func([]int, int)
+	dfs = func(set []int, current int) {
+		ans = append(ans, append([]int(nil), set...))
+		for i := current; i < n; i++ {
+			set = append(set, nums[i])
+			dfs(set, i+1)
+			set = set[:len(set)-1]
+		}
+	}
+	dfs([]int{}, 0)
+	return
+}

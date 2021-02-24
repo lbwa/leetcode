@@ -489,12 +489,27 @@ function fn(list) {
 
 > backtrack
 
+```go
+func backtrack(路径, 选择列表) {
+  if 结束条件 {
+    appendResult(路径) // 需要深拷贝
+    return
+  }
+
+  for _, 选择 := range 选择列表 {
+    做选择，加入路径
+    backtrack(路径，选择列表)
+    撤消选择
+  }
+}
+```
+
 ### medium
 
 - [39 组合总和](src/medium-39)
   - 典型组合型回溯算法
   - 枚举过程本身可看作是决策树遍历
-- [46](src/medium-46)
+- [46 全排列](src/medium-46)
   - 在路径项等于原始序列长度时，即表示已经存在一个排列，此时将此路径经加入结果中
   - 在递归过程中，分为选择当前项和不选择当前项（回溯）两条路径
 - [78 子集](src/medium-78)

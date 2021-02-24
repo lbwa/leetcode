@@ -1,46 +1,23 @@
 package medium78
 
 import (
-	"leetcode-solutions/src/shared"
-	"reflect"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestSolution(t *testing.T) {
-	shared.Expect(t, subsets0([]int{1, 2, 3}), [][]int{
+	assert := assert.New(t)
+	assert.Equal([][]int{
 		[]int(nil), // nil 切片与空切片不等价
-		[]int{1},
-		[]int{2},
-		[]int{1, 2},
-		[]int{3},
-		[]int{1, 3},
-		[]int{2, 3},
-		[]int{1, 2, 3},
-	})
-	got1 := subsets1([]int{1, 2, 3})
-	want1 := [][]int{
-		[]int(nil), // nil 切片与空切片不等价
-		[]int{1},
-		[]int{2},
-		[]int{1, 2},
-		[]int{3},
-		[]int{1, 3},
-		[]int{2, 3},
-		[]int{1, 2, 3},
-	}
-	for _, got := range got1 {
-		if !isIncluded(want1, got) {
-			t.Errorf(`%d should be in answer`, want1)
-			return
-		}
-	}
-}
-
-func isIncluded(nums [][]int, val []int) bool {
-	for _, v := range nums {
-		if reflect.DeepEqual(v, val) {
-			return true
-		}
-	}
-	return false
+		{1},
+		{2},
+		{1, 2},
+		{3},
+		{1, 3},
+		{2, 3},
+		{1, 2, 3},
+	}, subsets0([]int{1, 2, 3}))
+	assert.Equal([][]int{{1, 2, 3}, {1, 2}, {1, 3}, {1}, {2, 3}, {2}, {3}, []int(nil)}, subsets1([]int{1, 2, 3}))
+	assert.Equal([][]int{[]int(nil), {1}, {1, 2}, {1, 2, 3}, {1, 3}, {2}, {2, 3}, {3}}, subsets2([]int{1, 2, 3}))
 }
