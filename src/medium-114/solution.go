@@ -4,19 +4,21 @@ import (
 	structures "leetcode-solutions/data-structures"
 )
 
-func flatten0(root *structures.BinaryTreeNode) {
+type node = structures.BinaryTreeNode
+
+func flatten0(root *node) {
 	if root == nil {
 		return
 	}
 
-	stack := []*structures.BinaryTreeNode{root}
-	var prev *structures.BinaryTreeNode
-
+	stack := []*node{root}
+	var prev *node
 	for len(stack) > 0 {
-		currentIndex := len(stack) - 1
-		current := stack[currentIndex]
-		stack = stack[:currentIndex]
+		index := len(stack) - 1
+		current := stack[index]
+		stack = stack[:index]
 
+		// 相较于普通迭代法前序遍历多的步骤
 		if prev != nil {
 			prev.Left, prev.Right = nil, current
 		}
@@ -31,18 +33,18 @@ func flatten0(root *structures.BinaryTreeNode) {
 	}
 }
 
-func flatten1(root *structures.BinaryTreeNode) {
+func flatten1(root *node) {
 	if root == nil {
 		return
 	}
 
-	stack := []*structures.BinaryTreeNode{root}
-	preorderNodes := []*structures.BinaryTreeNode{}
+	order := []*node{}
+	stack := []*node{root}
 	for len(stack) > 0 {
-		currentIndex := len(stack) - 1
-		current := stack[currentIndex]
-		stack, preorderNodes = stack[:currentIndex], append(preorderNodes, current)
-
+		index := len(stack) - 1
+		current := stack[index]
+		stack = stack[:index]
+		order = append(order, current)
 		if current.Right != nil {
 			stack = append(stack, current.Right)
 		}
@@ -51,8 +53,9 @@ func flatten1(root *structures.BinaryTreeNode) {
 		}
 	}
 
-	for i := 1; i < len(preorderNodes); i++ {
-		prev, node := preorderNodes[i-1], preorderNodes[i]
-		prev.Left, prev.Right = nil, node
+	for i := 1; i < len(order); i++ {
+		prev := order[i-1]
+		prev.Left = nil
+		prev.Right = order[i]
 	}
 }

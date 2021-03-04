@@ -2,11 +2,13 @@ package medium114
 
 import (
 	structures "leetcode-solutions/data-structures"
-	"leetcode-solutions/src/shared"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestSolution(t *testing.T) {
+	assert := assert.New(t)
 	flatten0(nil)
 	flatten1(nil)
 	tree0 := &structures.BinaryTreeNode{
@@ -47,7 +49,7 @@ func TestSolution(t *testing.T) {
 	}
 	flatten0(tree0)
 	flatten1(tree1)
-	shared.Expect(t, tree0, &structures.BinaryTreeNode{
+	assert.Equal(t, tree0, &structures.BinaryTreeNode{
 		Val: 1,
 		Right: &structures.BinaryTreeNode{
 			Val: 2,
@@ -65,7 +67,7 @@ func TestSolution(t *testing.T) {
 			},
 		},
 	})
-	shared.Expect(t, tree1, &structures.BinaryTreeNode{
+	assert.Equal(t, tree1, &structures.BinaryTreeNode{
 		Val: 1,
 		Right: &structures.BinaryTreeNode{
 			Val: 2,
