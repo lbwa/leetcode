@@ -51,3 +51,29 @@ func combinationSum1(candidates []int, target int) (answer [][]int) {
 	dfs(target, 0, &[]int{})
 	return
 }
+
+func combinationSum2(candidates []int, target int) (ans [][]int) {
+	set := []int{}
+	n := len(candidates)
+	var sum int
+	var dfs func(int)
+	dfs = func(current int) {
+		if sum > target {
+			return
+		}
+		if sum == target {
+			ans = append(ans, append([]int(nil), set...))
+			return
+		}
+		for i := current; i < n; i++ {
+			num := candidates[i]
+			set = append(set, num)
+			sum += num
+			dfs(i)
+			set = set[:len(set)-1]
+			sum -= num
+		}
+	}
+	dfs(0)
+	return
+}
