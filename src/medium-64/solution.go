@@ -35,3 +35,33 @@ func min(a, b int) int {
 	}
 	return a
 }
+
+func minPathSumOptimize(grid [][]int) int {
+	if grid == nil || len(grid) < 1 || len(grid[0]) < 1 {
+		return 0
+	}
+
+	var min func(int, int) int
+	min = func(a, b int) int {
+		if a > b {
+			return b
+		}
+		return a
+	}
+	dp := make([]int, len(grid[0]))
+	rows, cols := len(grid), len(grid[0])
+	dp[0] = grid[0][0]
+
+	for i := 1; i < cols; i++ {
+		dp[i] = dp[i-1] + grid[0][i]
+	}
+
+	for i := 1; i < rows; i++ {
+		dp[0] += grid[i][0]
+		for j := 1; j < cols; j++ {
+			dp[j] = min(dp[j-1], dp[j]) + grid[i][j]
+		}
+	}
+
+	return dp[cols-1]
+}

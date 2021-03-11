@@ -18,4 +18,14 @@ func TestSolution(t *testing.T) {
 	}), 5)
 	assert.Equal(minPathSum([][]int{}), 0)
 	assert.Equal(minPathSum([][]int{{}}), 0)
+	assert.Equal(minPathSumOptimize([][]int{
+		{1, 3, 1},
+		{1, 5, 1},
+		{4, 2, 1},
+	}), 7)
+	assert.Equal(minPathSumOptimize([][]int{
+		{5},
+	}), 5)
+	assert.Equal(minPathSumOptimize([][]int{}), 0)
+	assert.Equal(minPathSumOptimize([][]int{{}}), 0)
 }
