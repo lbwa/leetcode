@@ -1,12 +1,14 @@
-package medium106
+package medium105
 
 import (
-	"leetcode-solutions/src/shared"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestSolution(t *testing.T) {
-	shared.Expect(t, buildTree([]int{9, 3, 15, 20, 7}, []int{9, 15, 7, 20, 3}), &node{
+	assert := assert.New(t)
+	assert.Equal(buildTree([]int{3, 9, 20, 15, 7}, []int{9, 3, 15, 20, 7}), &node{
 		Val:  3,
 		Left: &node{Val: 9},
 		Right: &node{
