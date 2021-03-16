@@ -52,6 +52,7 @@
   - [medium](#medium)
   - [hard](#hard)
 - [数组](#%E6%95%B0%E7%BB%84)
+  - [easy](#easy)
   - [medium](#medium)
 - [位操作](#%E4%BD%8D%E6%93%8D%E4%BD%9C)
   - [easy](#easy)
@@ -568,6 +569,11 @@ func backtrack(路径, 选择列表) {
     1. 从尾到头扫描，当 ratings[i] > ratings[i+1] 时，i 号糖果将比 i+1 号糖果多
 
 ## 数组
+
+### easy
+
+- [169 多数元素](src/easy-169)
+  - 找众数
 
 ### medium
 
