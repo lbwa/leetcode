@@ -14,4 +14,11 @@ func TestSolution(t *testing.T) {
 	assert.Equal(false, isValid("]"))
 	assert.Equal(true, isValid("{[[[{()}]]]}"))
 	assert.Equal(false, isValid("{[([{()}]]]}"))
+
+	assert.Equal(true, isValid0("{}"))
+	assert.Equal(false, isValid0("{]"))
+	assert.Equal(true, isValid0(""))
+	assert.Equal(false, isValid0("]"))
+	assert.Equal(true, isValid0("{[[[{()}]]]}"))
+	assert.Equal(false, isValid0("{[([{()}]]]}"))
 }

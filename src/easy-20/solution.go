@@ -2,6 +2,25 @@ package easy20
 
 func isValid(s string) bool {
 	charMap := map[rune]rune{
+		')': '(',
+		']': '[',
+		'}': '{',
+	}
+	stack := []rune{}
+
+	for _, char := range s {
+		if len(stack) > 0 && charMap[char] == stack[len(stack)-1] {
+			stack = stack[:len(stack)-1]
+		} else {
+			stack = append(stack, char)
+		}
+	}
+
+	return len(stack) < 1
+}
+
+func isValid0(s string) bool {
+	charMap := map[rune]rune{
 		'(': ')',
 		'[': ']',
 		'{': '}',
