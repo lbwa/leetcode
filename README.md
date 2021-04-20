@@ -57,6 +57,8 @@
 - [位操作](#%E4%BD%8D%E6%93%8D%E4%BD%9C)
   - [easy](#easy)
   - [medium](#medium)
+- [数学](#%E6%95%B0%E5%AD%A6)
+  - [easy](#easy)
 - [Difficulty level](#difficulty-level)
   - [easy](#easy)
 
@@ -624,6 +626,15 @@ func backtrack(路径, 选择列表) {
 - [338 比特位计数](src/meidum-338)
   - 按位与技巧：`x &= (x-1)` 可将 x 二进制表示的最后一个 1 变成 0
   - 基于第一步的操作数即是 x 的 1 的个数
+
+## 数学
+
+### easy
+
+- [263 丑数](src/easy-263)
+  - 丑数定义为仅有因子 2,3,5，那么不断的除以三个因子，直至不能被整除，那么判断商是否为 1，为 1 时，表示仅有 2，3，5 三个因子（为丑数），反之存在其他因子（不为丑数）
+  - 法二，[最小堆](https://leetcode-cn.com/problems/chou-shu-lcof/solution/chou-shu-by-leetcode-solution-0e5i#方法一：最小堆)
+  - 法三，[动态规划](https://leetcode-cn.com/problems/chou-shu-lcof/solution/chou-shu-by-leetcode-solution-0e5i#方法二：动态规划)
 
 ## Difficulty level
 
