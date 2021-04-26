@@ -1,4 +1,4 @@
-package easy236
+package easy235
 
 import (
 	"leetcode-solutions/src/shared"

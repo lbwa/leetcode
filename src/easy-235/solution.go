@@ -1,4 +1,4 @@
-package easy236
+package easy235
 
 import (
 	structures "leetcode-solutions/data-structures"
