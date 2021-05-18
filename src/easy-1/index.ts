@@ -8,6 +8,7 @@ export function twoSum(nums: number[], target: number) {
     }
     map[current] = i
   }
+  return [-1, -1]
 }
 
 // export function twoSum(nums: number[], target: number) {
