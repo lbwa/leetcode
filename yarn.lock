@@ -465,6 +465,11 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
+"@lbwa/tsconfig@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.nlark.com/@lbwa/tsconfig/download/@lbwa/tsconfig-0.1.0.tgz?cache=0&sync_timestamp=1621045639151&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40lbwa%2Ftsconfig%2Fdownload%2F%40lbwa%2Ftsconfig-0.1.0.tgz#16b5c7ed3b277a0f0ab9b1509fea4c6c1eb3636a"
+  integrity sha1-FrXH7Tsneg8KubFQn+pMbB6zY2o=
+
 "@sinonjs/commons@^1.7.0":
   version "1.8.1"
   resolved "https://registry.npm.taobao.org/@sinonjs/commons/download/@sinonjs/commons-1.8.1.tgz#e7df00f98a203324f6dc7cc606cad9d4a8ab2217"
@@ -3704,10 +3709,10 @@ typedarray-to-buffer@^3.1.5:
   dependencies:
     is-typedarray "^1.0.0"
 
-typescript@^4.1.3:
-  version "4.1.3"
-  resolved "https://registry.npm.taobao.org/typescript/download/typescript-4.1.3.tgz#519d582bd94cba0cf8934c7d8e8467e473f53bb7"
-  integrity sha1-UZ1YK9lMugz4k0x9joRn5HP1O7c=
+typescript@^4.2.4:
+  version "4.2.4"
+  resolved "https://registry.nlark.com/typescript/download/typescript-4.2.4.tgz#8610b59747de028fda898a8aef0e103f156d0961"
+  integrity sha1-hhC1l0feAo/aiYqK7w4QPxVtCWE=
 
 union-value@^1.0.0:
   version "1.0.1"
