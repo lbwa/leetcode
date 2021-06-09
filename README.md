@@ -312,6 +312,9 @@ $ npm t <DIR_NAME_OR_FILE_NAME>
 
 ## 二分查找
 
+1. 每次迭代都要确定下一个区间在哪；
+1. while 循环内，所有的 if 语句无交集，且并集一定是整个 [left, right] 区间
+
 ### easy
 
 - [35 搜索插入位置](src/easy-35)
