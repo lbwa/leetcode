@@ -33,11 +33,19 @@ func search(nums []int, target int) int {
 			}
 		} else {
 			// 结合 !(pivot < nums[right]) 条件，mid 此时位于拐点到最大值区间，此时 [left, mid] 一定是有序的。
-			if nums[left] <= target && target < pivot {
+			if nums[left] <= target && target <= nums[mid-1] {
 				right = mid - 1 // 下一轮区间 [left, mid-1]
 			} else {
 				left = mid // 下一轮区间 [mid, right]
 			}
+
+			// 补充说明：由于中间数上取整，在区间只剩下两个元素的时候，mid 与 right 重合，
+			// 方法逻辑走到 else 分支里。此时恰好 if 这个分支看到的是 left 和 mid - 1 ，用
+			// 到的都是 == 号，等价于判断 nums[left] == target。因此依然可以缩减区间，注意
+			// 这里 if 里面的 nums[left] <= target && target <= nums[mid - 1] ，
+			// 不可以写成 nums[left] <= target && target < nums[mid]，如在 [3,1] 这样的
+			// 用例中将出现错误答案
+
 		}
 	}
 
